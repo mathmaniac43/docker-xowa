@@ -7,8 +7,8 @@ ENV XOWA_VERSION 4.6.5.1911
 
 RUN apk add --no-cache --virtual .build-deps wget unzip \
  && mkdir -p /opt/xowa/wiki \
- && wget --no-check-certificate -O xowa.zip https://github.com/gnosygnu/xowa/releases/download/v$XOWA_VERSION/xowa_app_linux_64_v$XOWA_VERSION.zip \
- && unzip xowa.zip -d /opt/xowa \
+ && wget --no-verbose --no-check-certificate -O xowa.zip https://github.com/gnosygnu/xowa/releases/download/v$XOWA_VERSION/xowa_app_linux_64_v$XOWA_VERSION.zip \
+ && unzip -q xowa.zip -d /opt/xowa \
  && rm -f xowa.zip \
  && apk del .build-deps
 

@@ -3,7 +3,7 @@ FROM openjdk:8-alpine
 # thanks to Angel Rodriguez  "angel@quantumobject.com" for the inital dockerfile
 MAINTAINER Scott Mundorff "scott.mundorff@gmail.com"
 
-ENV XOWA_VERSION 4.6.5.1911
+ENV XOWA_VERSION 4.6.15.2101
 
 RUN apk add --no-cache --virtual .build-deps wget unzip \
  && mkdir -p /opt/xowa/wiki \
